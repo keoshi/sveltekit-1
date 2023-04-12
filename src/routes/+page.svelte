@@ -1,7 +1,6 @@
 <script>
 	import Counter from './Counter.svelte';
-	import welcome from '$lib/images/svelte-welcome.webp';
-	import welcome_fallback from '$lib/images/svelte-welcome.png';
+	import penrose from '$lib/images/impossible-penrose-triangle-01.jpg';
 </script>
 
 <svelte:head>
@@ -10,25 +9,18 @@
 </svelte:head>
 
 <section>
-	<h1>
-		<span class="welcome">
-			<picture>
-				<source srcset={welcome} type="image/webp" />
-				<img src={welcome_fallback} alt="Welcome" />
-			</picture>
-		</span>
+	<h1>Welcome to SvelteKit!</h1>
 
-		to your new<br />SvelteKit app
-	</h1>
-
-	<h2>
-		try editing <strong>src/routes/+page.svelte</strong>
-	</h2>
+	<span class="image">
+		<picture>
+			<img src={penrose} alt="Penrose impossible triangle" />
+		</picture>
+	</span>
 
 	<Counter />
 </section>
 
-<style>
+<style lang="scss">
 	section {
 		display: flex;
 		flex-direction: column;
@@ -41,19 +33,12 @@
 		width: 100%;
 	}
 
-	.welcome {
+	.image {
 		display: block;
 		position: relative;
-		width: 100%;
-		height: 0;
-		padding: 0 0 calc(100% * 495 / 2048) 0;
 	}
 
-	.welcome img {
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		top: 0;
-		display: block;
+	img {
+		max-width: 100%;
 	}
 </style>
