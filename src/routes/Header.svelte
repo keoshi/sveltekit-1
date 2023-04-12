@@ -16,9 +16,6 @@
 			<li aria-current={$page.url.pathname.startsWith('/settings') ? 'page' : undefined}>
 				<a href="/settings">Settings</a>
 			</li>
-			<li aria-current={$page.url.pathname.startsWith('/sverdle') ? 'page' : undefined}>
-				<a href="/sverdle">Sverdle</a>
-			</li>
 		</ul>
 	</nav>
 </header>
